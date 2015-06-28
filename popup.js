@@ -1,8 +1,8 @@
 // This callback function is called when the content script has been 
 // injected and returned its results
 function onPageDetailsReceived(pageDetails)  { 
-    document.getElementById('title').value = pageDetails.url; 
-    document.getElementById('text').innerText = pageDetails.summary; 
+    document.getElementById('title').value = pageDetails.title; 
+    document.getElementById('text').value = pageDetails.summary; 
 } 
 
 // Global reference to the status display SPAN

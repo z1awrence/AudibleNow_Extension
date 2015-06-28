@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "AudibleNow",
+    "description": "It's been described as revolutionary",
+    "version": "0.2",
+    "background": {
+        "scripts": ["event.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs", 
+        "http://*/*", 
+        "https://*/*"
+    ],
+    "content_scripts": [ 
+        {
+            "matches": ["<all_urls>"],
+            "js": ["parse-1.4.2.min.js","jquery.min.js"]
+        }
+    ]
+}

@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-           <script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="parse-1.4.2.min.js"></script>
-        <style>
+       <!-- CSS -->
+       <link rel="stylesheet" href="css/normalize.css" />
+       <link rel="stylesheet" href="css/style.css" />
+       <script type="text/javascript" src="jquery.min.js"></script>
+       <script type="text/javascript" src="parse-1.4.2.min.js"></script>
+       <style>
             body { 
-                min-width: 420px; 
+                min-width: 420px;
+                height: 800px; 
                 overflow-x: hidden; 
                 font-family: Arial, sans-serif; 
                 font-size: 12px; 
             }
             input, textarea { 
-                width: 420px; 
+                width: 420px;
+                height: 315px; 
             }
             input#save { 
                 font-weight: bold; width: auto; 
             }
+            #email {
+                height: 30px;
+            }
+            #title {
+                height: 30px;
+                text-align: left;
+            }
+            #save {
+                height:100px;
+                width:200px;
+            }
+            #text {
+            }
+            span {
+                display: inline-block;
+  vertical-align: top;
+  line-height: normal; 
+            }
+
         </style>
         <script src="popup.js"></script>
 
@@ -27,9 +51,12 @@
             <p><label for="title">Title</label><br />
             <input type="text" id="title" name="title" size="50" value="" /></p>
             <p><label for="text">Text</label><br />
-            <input type="text" id="text" name="text" size="50" value="" /></p>
+                <span>
+            <input align="top" type="text" id="text" name="text" size="50" value=""/>
+        </span>
+        </p>
             <p>
-                <input id="save" type="submit" value="Listen Later!" />
+                <center><input id="save" type="submit" value="Listen Later!" /></center>
                 <span id="status-display"></span>
             </p>
         </form>
